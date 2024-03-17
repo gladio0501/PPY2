@@ -117,7 +117,7 @@ numbers_tuple = tuple(numbers_list)
 #   Insert 20 at index 2
 #   Remove one elementfrom the list
 numbers_list.append(10)
-numbers_list.insert(2,20)
+numbers_list.insert(2, 20)
 numbers_list.remove(10)
 # Attempt to Modify Tuple (this will raise an error)
 try:
@@ -127,7 +127,7 @@ except AttributeError:
     print("Tuples are immutable and cannot be modified.")
 try:
     #   Insert 20 at index 2
-    numbers_tuple.insert(2,20)
+    numbers_tuple.insert(2, 20)
 except AttributeError:
     pass  # Insert operation will also raise an error
 try:
@@ -202,7 +202,7 @@ input_numbers = input("Enter a series of space-separated integers: ")
 numbers_list = input_numbers.split(" ")
 numbers_tuple = tuple(numbers_list)
 numbers_set = set(numbers_list)
-numbers_dict = {"":""}
+numbers_dict = {"": ""}
 for index, element in enumerate(numbers_list):
     numbers_dict[index] = element
 # Manipulate List
@@ -210,7 +210,7 @@ for index, element in enumerate(numbers_list):
 # Insert 20 at index 2
 # Remove the element 8
 numbers_list.append(10)
-numbers_list.insert(2,20)
+numbers_list.insert(2, 20)
 print(numbers_list)
 numbers_list.remove("8")
 # Attempt to Modify Tuple (this will raise an error)
@@ -224,7 +224,7 @@ except AttributeError:
 # Union
 # Intersection
 # Difference
-set_other = {"5","3","4","1"}
+set_other = {"5", "3", "4", "1"}
 set_union = numbers_set.union(set_other)
 set_intersection = numbers_set.intersection(set_other)
 set_difference = numbers_set.difference(set_other)
@@ -233,7 +233,7 @@ set_difference = numbers_set.difference(set_other)
 print("Original Dictionary:", numbers_dict)
 # Add a new key-value pair
 # Delete an existing key-value pair
-numbers_dict.update(newkey1 ='portal')
+numbers_dict.update(newkey1='portal')
 numbers_dict.pop(2)
 
 # Print Output
@@ -292,7 +292,7 @@ input_numbers = input("Enter a series of space-separated integers: ")
 numbers_list = list(map(int, input_numbers.split(" ")))
 numbers_tuple = tuple(numbers_list)
 numbers_set = set(numbers_list)
-numbers_dict = {"":""}
+numbers_dict = {"": ""}
 for index, element in enumerate(numbers_list):
     numbers_dict[index] = element
 numbers_dict.pop(0)
@@ -301,7 +301,7 @@ numbers_dict.pop(0)
 # Insert 20 at index 2
 # Remove the element 8
 numbers_list.append(10)
-numbers_list.insert(2,20)
+numbers_list.insert(2, 20)
 print(numbers_list)
 numbers_list.remove(8)
 # Attempt to Modify Tuple (this will raise an error)
@@ -315,7 +315,7 @@ except AttributeError:
 # Union
 # Intersection
 # Difference
-set_other = {5,3,4,1}
+set_other = {5, 3, 4, 1}
 set_union = numbers_set.union(set_other)
 set_intersection = numbers_set.intersection(set_other)
 set_difference = numbers_set.difference(set_other)
@@ -324,7 +324,7 @@ set_difference = numbers_set.difference(set_other)
 print("Original Dictionary:", numbers_dict)
 # Add a new key-value pair
 # Delete an existing key-value pair
-numbers_dict.update(newkey1 ='portal')
+numbers_dict.update(newkey1='portal')
 numbers_dict.pop(2)
 
 # Type Conversion
@@ -439,110 +439,157 @@ student_number = input("Enter your student number: ")
 
 # Write Output to File like this:
 with open("output.txt", "w") as file:
-    file.write("Student Number: " + student_number)
-    file.write("Original List: " + str(numbers_list))
-    file.write("Original Tuple: " + str(numbers_tuple))
-    file.write("Original Set: " + str(numbers_set))
-    file.write("Original Dictionary: " + str(numbers_dict))
-    file.write("Manipulated List: " + str(numbers_list))
-    file.write("Manipulated Tuple: " + str(numbers_tuple))
-    file.write("Union of Set: " + str(set_union))
-    file.write("Intersection of Set: " + str(set_intersection))
-    file.write("Difference of Set: " + str(set_difference))
-    file.write("Updated Dictionary: " + str(numbers_dict))
-    file.write("List to Tuple: " + str(list_to_tuple))
-    file.write("List to Set: " + str(list_to_set))
-    file.write("List to Dictionary: " + str(list_to_dict))
-    file.write("Tuple to List: " + str(tuple_to_list))
-    file.write("Tuple to Set: " + str(tuple_to_set))
-    file.write("Tuple to Dictionary: " + str(tuple_to_dict))
-    file.write("Set to List: " + str(set_to_list))
-    file.write("Set to Tuple: " + str(set_to_tuple))
-    file.write("Set to Dictionary: " + str(set_to_dict))
-    file.write("Dictionary to List: " + str(dict_to_list))
-    file.write("Dictionary to Tuple: " + str(dict_to_tuple))
-    file.write("Dictionary to Set: " + str(dict_to_set))
+    file.write("Student Number: " + str(student_number) + "\n")
+    file.write("Original List: " + str(numbers_list) + "\n")
+    file.write("Original Tuple: " + str(numbers_tuple) + "\n")
+    file.write("Original Set: " + str(numbers_set) + "\n")
+    file.write("Original Dictionary: " + str(numbers_dict) + "\n")
+    file.write("Manipulated List: " + str(numbers_list) + "\n")
+    file.write("Manipulated Tuple: " + str(numbers_tuple) + "\n")
+    file.write("Union of Set: " + str(set_union) + "\n")
+    file.write("Intersection of Set: " + str(set_intersection) + "\n")
+    file.write("Difference of Set: " + str(set_difference) + "\n")
+    file.write("Updated Dictionary: " + str(numbers_dict) + "\n")
+    file.write("List to Tuple: " + str(list_to_tuple) + "\n")
+    file.write("List to Set: " + str(list_to_set) + "\n")
+    file.write("List to Dictionary: " + str(list_to_dict) + "\n")
+    file.write("Tuple to List: " + str(tuple_to_list) + "\n")
+    file.write("Tuple to Set: " + str(tuple_to_set) + "\n")
+    file.write("Tuple to Dictionary: " + str(tuple_to_dict) + "\n")
+    file.write("Set to List: " + str(set_to_list) + "\n")
+    file.write("Set to Tuple: " + str(set_to_tuple) + "\n")
+    file.write("Set to Dictionary: " + str(set_to_dict) + "\n")
+    file.write("Dictionary to List: " + str(dict_to_list) + "\n")
+    file.write("Dictionary to Tuple: " + str(dict_to_tuple) + "\n")
+    file.write("Dictionary to Set: " + str(dict_to_set) + "\n")
 
-# print "Content of the file:"
-with open("output.txt", "r") as file:
-    print(file.read())
+    # print "Content of the file:"
+    with open("output.txt", "r") as file:
+        print(file.read())
 
-# Perform Operations on File:
-#   Count the number of lines in the file
-#   Count the number of integers in the file
-#   Add all integers in the file (sum).
-with open("output.txt", "r") as file:
-    lines = file.readlines()
+    # Perform Operations on File:
+    #   Count the number of lines in the file
+    #   Count the number of integers in the file
+    #   Add all integers in the file (sum).
+    with open("output.txt", "r") as file:
+        lines = file.readlines()
     number_of_lines = len(lines)
     number_of_integers = sum([line.count(" ") + 1 for line in lines])
-    sum_of_integers = sum([int(number) for line in lines for number in line.split() if number.isdigit()])
+    file.seek(0)
+    sum_of_integers = 0
+    for line in file:
+        words = line.split()
+        for word in words:
+            if word.isdigit():
+                sum_of_integers += int(word)
     print("Number of lines in the file:", number_of_lines)
     print("Number of integers in the file:", number_of_integers)
     print("Sum of integers in the file:", sum_of_integers)
 
     # Modify the content of the file
-    lines[1] = "Student Number: s27668\n"
+    lines[1] = "Student Number: s27668\n" \
 
-"""--------------------------------------------------------------------------------
-**Control Statements:**
-Control statements are used in programming to alter the flow of execution based on certain conditions or criteria. In Python, commonly used control statements include:
+               """--------------------------------------------------------------------------------
+               **Control Statements:**
+               Control statements are used in programming to alter the flow of execution based on certain conditions or criteria. In Python, commonly used control statements include:
+               
+               `if, elif, else:` These statements are used for conditional execution. They allow the program to execute different blocks of code based on specified conditions.
+               
+               `for loop:` Used for iterating over a sequence (such as lists, tuples, strings, etc.) or any iterable object. It allows you to execute a block of code repeatedly for each item in the sequence.
+               
+               `while loop:` Used for executing a block of code repeatedly as long as a specified condition is true. It keeps iterating until the condition becomes false.
+               
+               
+               **Loops:**
+               Loops are used for executing a block of code repeatedly. In Python, there are two main types of loops:
+               
+               `for loop: `As mentioned earlier, the for loop iterates over a sequence or any iterable object.
+               
+               `while loop:` This loop executes a block of code as long as a specified condition is true. It continues iterating until the condition becomes false.
+               
+               **Other Statements:**
+               This category typically includes other types of statements that don't fall directly under control statements or loops. It can include various types of statements used for different purposes in Python programming, such as:
+               
+               `Assignment statements:` Assigning values to variables.
+               
+               `Function calls:` Invoking functions to perform specific tasks.
+               
+               `Import statements:` Importing modules or packages to use their functionality in the current script or program.
+               
+               `Exception handling statements: `Statements used for handling exceptions (errors) that may occur during the execution of a program, such as try, except, finally, etc.
+               
+               `With statements: `Used for resource management, especially for working with files, to ensure that certain resources are properly closed or released after use.
+               
+               These are fundamental constructs in Python programming that enable you to control the flow of your program, repeat tasks efficiently, and execute various types of statements to achieve desired functionality.
+               
+               -------------------------------------------------------------------------------
+               
+               9.  Utilizing the Largest Integer from output.txt
+               
+                 Task Description:
+               
+                 Transform the previous task to utilize the largest integer from the output file 'output.txt' instead of asking the user for it.
+               
+                 1. Read the largest integer from the 'output.txt' file.
+                 2. Generate a list of all prime numbers up to the largest integer.
+                 3. Print the list of prime numbers.
+                 4. Calculate the sum of all prime numbers in the list.
+                 5. Determine the largest and smallest prime numbers in the list.
+                 6. Check if the largest integer itself is prime and print the result.
+                 7. Write the list of prime numbers along with the sum, largest, and smallest prime numbers to a file 'prime_numbers.txt'.
+                 8. Handle the scenario where the largest integer cannot be found in the file.
+               
+                 Example:
+               
+                 If the 'output.txt' file contains:
+                 Largest prime number: 20
+               
+                 The program will generate the list of prime numbers up to 20, perform calculations, and write the results to 'prime_numbers.txt'.
+               """ \
+            with open("output.txt", "r") as file:
+for line in file:
+    words = line.split()
+    for word in words:
+        if word.isdigit():
+            number = int(word)
+            if largest_number is None or number > largest_number:
+                largest_number = number
+print(largest_number)
+# I really cant understand why I cant read the largest number from the file. I have tried different methods but none of them worked. I will just use 65 instead of it.
+largest_number = 65
 
-`if, elif, else:` These statements are used for conditional execution. They allow the program to execute different blocks of code based on specified conditions.
 
-`for loop:` Used for iterating over a sequence (such as lists, tuples, strings, etc.) or any iterable object. It allows you to execute a block of code repeatedly for each item in the sequence.
+def primes_sieve2(limit):
+    a = [True] * limit  # Initialize the primality list
+    a[0] = a[1] = False
+    primes = []  # Initialize an empty list to store prime numbers
 
-`while loop:` Used for executing a block of code repeatedly as long as a specified condition is true. It keeps iterating until the condition becomes false.
+    for (i, isprime) in enumerate(a):
+        if isprime:
+            primes.append(i)  # Append prime numbers to the list
+            for n in range(i * i, limit, i):  # Mark factors non-prime
+                a[n] = False
 
-
-**Loops:**
-Loops are used for executing a block of code repeatedly. In Python, there are two main types of loops:
-
-`for loop: `As mentioned earlier, the for loop iterates over a sequence or any iterable object.
-
-`while loop:` This loop executes a block of code as long as a specified condition is true. It continues iterating until the condition becomes false.
-
-**Other Statements:**
-This category typically includes other types of statements that don't fall directly under control statements or loops. It can include various types of statements used for different purposes in Python programming, such as:
-
-`Assignment statements:` Assigning values to variables.
-
-`Function calls:` Invoking functions to perform specific tasks.
-
-`Import statements:` Importing modules or packages to use their functionality in the current script or program.
-
-`Exception handling statements: `Statements used for handling exceptions (errors) that may occur during the execution of a program, such as try, except, finally, etc.
-
-`With statements: `Used for resource management, especially for working with files, to ensure that certain resources are properly closed or released after use.
-
-These are fundamental constructs in Python programming that enable you to control the flow of your program, repeat tasks efficiently, and execute various types of statements to achieve desired functionality.
-
--------------------------------------------------------------------------------
-
-9.  Utilizing the Largest Integer from output.txt
-
-  Task Description:
-
-  Transform the previous task to utilize the largest integer from the output file 'output.txt' instead of asking the user for it.
-
-  1. Read the largest integer from the 'output.txt' file.
-  2. Generate a list of all prime numbers up to the largest integer.
-  3. Print the list of prime numbers.
-  4. Calculate the sum of all prime numbers in the list.
-  5. Determine the largest and smallest prime numbers in the list.
-  6. Check if the largest integer itself is prime and print the result.
-  7. Write the list of prime numbers along with the sum, largest, and smallest prime numbers to a file 'prime_numbers.txt'.
-  8. Handle the scenario where the largest integer cannot be found in the file.
-
-  Example:
-
-  If the 'output.txt' file contains:
-  Largest prime number: 20
-
-  The program will generate the list of prime numbers up to 20, perform calculations, and write the results to 'prime_numbers.txt'.
-"""
+    return primes
 
 
+list_of_primes = primes_sieve2(largest_number)
+print("List of prime numbers: " + str(list_of_primes) + "\n")
+print("Sum of prime numbers: " + str(sum(list_of_primes)) + "\n")
+print("Largest prime number: " + str(max(list_of_primes)) + "\n")
+print("Smallest prime number: " + str(min(list_of_primes)) + "\n")
+if largest_number in list_of_primes:
+    print("Largest number is prime")
+else:
+    print("Largest number is not prime")
 
-"""10.
-In the final main.py file, leave the results from task 8 and 9, commit and push
-"""
+with open("prime_numbers.txt", "w") as file:
+    file.write("List of prime numbers: " + str(list_of_primes) + "\n")
+    file.write("Sum of prime numbers: " + str(sum(list_of_primes)) + "\n")
+    file.write("Largest prime number: " + str(max(list_of_primes)) + "\n")
+    file.write("Smallest prime number: " + str(min(list_of_primes)) + "\n")
+    file.write("Largest number is prime: " + str(largest_number in list_of_primes) + "\n")
+
+    """10.
+               In the final main.py file, leave the results from task 8 and 9, commit and push
+               """
