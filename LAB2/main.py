@@ -289,31 +289,57 @@ print("Updated Dictionary:", numbers_dict)
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input
-
+numbers_list = list(map(int, input_numbers.split(" ")))
+numbers_tuple = tuple(numbers_list)
+numbers_set = set(numbers_list)
+numbers_dict = {"":""}
+for index, element in enumerate(numbers_list):
+    numbers_dict[index] = element
+numbers_dict.pop(0)
 # Manipulate List
-
+# Append 10 to the list
+# Insert 20 at index 2
+# Remove the element 8
+numbers_list.append(10)
+numbers_list.insert(2,20)
+print(numbers_list)
+numbers_list.remove(8)
 # Attempt to Modify Tuple (this will raise an error)
+try:
+    # Append 10 to the tuple
+    numbers_tuple.append(10)
+except AttributeError:
+    print("Tuples are immutable and cannot be modified.")
 
 # Set Operations
+# Union
+# Intersection
+# Difference
+set_other = {5,3,4,1}
+set_union = numbers_set.union(set_other)
+set_intersection = numbers_set.intersection(set_other)
+set_difference = numbers_set.difference(set_other)
 
 # Dictionary Operations
 print("Original Dictionary:", numbers_dict)
 # Add a new key-value pair
 # Delete an existing key-value pair
+numbers_dict.update(newkey1 ='portal')
+numbers_dict.pop(2)
 
 # Type Conversion
-# list_to_tuple =
-# list_to_set =
-# list_to_dict =
-# tuple_to_list =
-# tuple_to_set =
-# tuple_to_dict =
-# set_to_list =
-# set_to_tuple =
-# set_to_dict =
-# dict_to_list =
-# dict_to_tuple =
-# dict_to_set =
+list_to_tuple = tuple(numbers_list)
+list_to_set = set(numbers_list)
+list_to_dict = dict(enumerate(numbers_list))
+tuple_to_list = list(numbers_tuple)
+tuple_to_set = set(numbers_tuple)
+tuple_to_dict = dict(enumerate(numbers_tuple))
+set_to_list = list(numbers_set)
+set_to_tuple = tuple(numbers_set)
+set_to_dict = dict(enumerate(numbers_set))
+dict_to_list = list(numbers_dict.values())
+dict_to_tuple = tuple(numbers_dict.values())
+dict_to_set = set(numbers_dict.values())
 
 # Print Output
 print("List to Tuple:", list_to_tuple)
